@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireURLShortener.AppHost", "AspireURLShortener.AppHost\AspireURLShortener.AppHost.csproj", "{46B2184B-474C-457B-A866-69081882E8E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireURLShortener.ServiceDefaults", "AspireURLShortener.ServiceDefaults\AspireURLShortener.ServiceDefaults.csproj", "{BB0D7498-B775-4F6A-9E7E-388DFF7617D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireURLShortener.ApiService", "AspireURLShortener.ApiService\AspireURLShortener.ApiService.csproj", "{C2E91071-5B00-421A-B5E6-EDAD420DAE15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46B2184B-474C-457B-A866-69081882E8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B2184B-474C-457B-A866-69081882E8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B2184B-474C-457B-A866-69081882E8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B2184B-474C-457B-A866-69081882E8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0D7498-B775-4F6A-9E7E-388DFF7617D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0D7498-B775-4F6A-9E7E-388DFF7617D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0D7498-B775-4F6A-9E7E-388DFF7617D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0D7498-B775-4F6A-9E7E-388DFF7617D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E91071-5B00-421A-B5E6-EDAD420DAE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E91071-5B00-421A-B5E6-EDAD420DAE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E91071-5B00-421A-B5E6-EDAD420DAE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E91071-5B00-421A-B5E6-EDAD420DAE15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
