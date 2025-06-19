@@ -1,7 +1,13 @@
+using AspireURLShortener.ApiService;
+using AspireURLShortener.ApiService.Data;
 using AspireURLShortener.ApiService.Endpoints;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddNpgsqlDbContext<ApplicationDbContext>(connectionName: "postgresDb");
+
+// Add DB context via aspire
 
 // Add service defaults & Aspire client integrations.
 builder.Services.AddEndpoints();
@@ -22,6 +28,7 @@ app.MapEndpoints();
 
 if (app.Environment.IsDevelopment())
 {
+    await app.ConfigureDatabaseAsync();
     app.MapOpenApi();
 }
 
