@@ -6,7 +6,6 @@ namespace AspireURLShortener.ApiService.Features.Urls;
 public sealed class ShortenUrl
 {
     public sealed record Request(string Url);
-    public sealed record Response(Guid Id, string OriginalUrl, string ShortenedUrl, string Code, DateTime CreatedAt);
     
     public class Endpoint : IEndpoint
     {
@@ -37,7 +36,7 @@ public sealed class ShortenUrl
         dbContext.ShortenedUrls.Add(shortenedUrlEntity);
         await dbContext.SaveChangesAsync();
 
-        var response = new Response(shortenedUrlEntity.Id, request.Url, shortenedUrl, code,
+        var response = new ShortenedUrlResponse(shortenedUrlEntity.Id, request.Url, shortenedUrl, code,
             shortenedUrlEntity.CreatedOnUtc);
 
         return TypedResults.Ok(response);
