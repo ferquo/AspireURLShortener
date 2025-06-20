@@ -20,11 +20,17 @@ public sealed class GetPaginatedShortenedUrls
     
     public static async Task<IResult> Handler(ApplicationDbContext dbContext, [FromQuery]int page = 1, [FromQuery]int pageSize = 10)
     {
-        var totalCount = await dbContext.ShortenedUrls.CountAsync();
+        var totalCount = await dbContext.ShortenedUrls.Where(s => s.RemovedOnUtc == null).CountAsync();
+        if (totalCount <= 0)
+        {
+            return TypedResults.NotFound();
+        }
+
         var shortenedUrls = await dbContext.ShortenedUrls
             .OrderByDescending(u => u.CreatedOnUtc)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
+            .Where(s => s.RemovedOnUtc == null)
             .Select(u => new ShortenedUrlResponse(u.Id, u.LongUrl, u.ShortUrl, u.Code, u.CreatedOnUtc))
             .ToListAsync();
 
