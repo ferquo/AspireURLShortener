@@ -8,7 +8,7 @@ namespace AspireURLShortener.ApiService.Features.Urls;
 public sealed class GetPaginatedShortenedUrls
 {
     public sealed record Request(int Page, int PageSize);
-    public sealed record Response(List<ShortenedUrlResponse> ShortenedUrls, int Page, int TotalCount);
+    public sealed record Response(List<ShortenedUrlResponse> Items, int Page, int TotalCount);
     
     public class Endpoint : IEndpoint
     {
